@@ -4,8 +4,10 @@ from backend.database import init_db
 from backend.models import db
 from flask_migrate import Migrate
 from config import get_config  # Importa a função que define o ambiente
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Habilita CORS para todas as rotas
 
 # Configurações da aplicação com base no ambiente (desenvolvimento ou produção)
 app.config.from_object(get_config())
