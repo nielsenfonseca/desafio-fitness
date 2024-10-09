@@ -10,7 +10,7 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     # Banco de dados Postgres no Supabase para produção
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres.tpavwcyenfhucopzthrm:Stihels2009!@aws-0-sa-east-1.pooler.supabase.com:6543/postgres'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres.tpavwcyenfhucopzthrm:StihelS2009000@aws-0-sa-east-1.pooler.supabase.com:6543/postgres'
 
 # Função que seleciona a configuração com base na variável de ambiente
 def get_config():
