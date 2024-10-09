@@ -315,3 +315,8 @@ def configure_routes(app):
         users_without_group = User.query.filter_by(group_id=None).all()
         usernames = [user.username for user in users_without_group]
         return jsonify({'usernames': usernames})
+    
+    # Rota para testar se o servidor está rodando
+    @app.route('/ping', methods=['GET'])
+    def ping():
+        return jsonify({'message': 'pong'}), 200
