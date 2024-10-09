@@ -8,7 +8,7 @@ base_path = os.path.dirname(__file__)
 # Construir o caminho completo da imagem
 logo_path = os.path.join(base_path, "utils", "logo.png")
 
-API_BASE_URL = "https://desafio-fitness.herokuapp.com"
+API_BASE_URL = "https://desafio-fitness-4f71f2c74cc9.herokuapp.com/"
 
 # Custom CSS to style the sidebar (navbar)
 sidebar_style = """
