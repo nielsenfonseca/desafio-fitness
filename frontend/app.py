@@ -1,8 +1,12 @@
 import streamlit as st
 import requests
-    
-# Caminho da imagem local (na raiz do projeto)
-logo_path = fr"C:\Users\niels\OneDrive\Documentos\desafiofitness-app\backend\utils\logo.png"
+import os    
+
+# Definir o caminho base do diretório atual
+base_path = os.path.dirname(__file__)
+
+# Construir o caminho completo da imagem
+logo_path = os.path.join(base_path, "utils", "logo.png")
 
 API_BASE_URL = "http://127.0.0.1:5000"
 
