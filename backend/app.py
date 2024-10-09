@@ -2,6 +2,7 @@ from flask import Flask, session
 from backend.routes import configure_routes
 from backend.database import init_db
 from backend.models import db
+from flask_migrate import Migrate
 from config import get_config  # Importa a função que define o ambiente
 
 app = Flask(__name__)
@@ -16,9 +17,8 @@ app.config['SECRET_KEY'] = app.config.get('SECRET_KEY', '2ebfcc42fdd537ac1424f6a
 init_db(app)
 configure_routes(app)
 
-# Cria todas as tabelas (caso ainda não existam)
-with app.app_context():
-    db.create_all()
+# Inicializa as migrações
+migrate = Migrate(app, db)
 
 if __name__ == '__main__':
     app.run(debug=True)
