@@ -6,7 +6,7 @@ class Config:
 
 class DevelopmentConfig(Config):
     # Banco de dados local para desenvolvimento
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///fitness.db'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres.tpavwcyenfhucopzthrm:StihelS2009000@aws-0-sa-east-1.pooler.supabase.com:6543/postgres'
 
 class ProductionConfig(Config):
     # Banco de dados Postgres no Supabase para produção
